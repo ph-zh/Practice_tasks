@@ -23,25 +23,26 @@ public class Practicum {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите сумму в современных рублях:");
-        float amount = scanner.nextFloat();
+        double amount = scanner.nextDouble();
 
         System.out.println("Введите год (1913 или 1984)");
         int year = scanner.nextInt();
         double result;
-
+        int rate1913 = 884;
+        int rate1984 = 337;
 
         // используйте switch
         // Посчитайте, сколько у вас рублей для введённого года
         // Если для указанного года нет курса, то выведите сообщение
         // "Для этого года у нас нет данных." и прекратите выполнение метода.
         switch(year) {
-            case 1913:
-                result = amount / 884;
+            case 1913 :
+                result = amount / rate1913;
                 break;
-            case 1984:
-                result = amount / 337;
+            case 1984 :
+                result = amount / rate1984;
                 break;
-            default:
+            default :
                 System.out.println("Для этого года у нас нет данных.");
                 return;
         }
