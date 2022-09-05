@@ -8,23 +8,17 @@ public class PostComment {
 
     @Override
     public String toString() {
-        String result = "PostComment {text='" + text + '\'';
-        return result + ", whoLiked=" + Arrays.toString(whoLiked) + '}';
+        return "PostComment{" +
+                "text='" + text + '\'' +
+                ", whoLiked=" + Arrays.toString(whoLiked) +
+                '}';
     }
 
-    public String getText() {
-        return text;
-    }
+        public void setText(String text) {
+            this.text = text;
+        }
 
-    public String setText() {
-        return text;
+        public void setWhoLiked(String[] whoLiked) {
+            this.whoLiked = whoLiked;
+        }
     }
-
-    public String[] getWhoLiked() {
-        return whoLiked;
-    }
-
-    public String[] setWhoLiked() {
-        return whoLiked;
-    }
-}

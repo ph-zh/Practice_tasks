@@ -9,53 +9,36 @@ public class Post {
     private String[] tags; // теги
     private ArrayList<PostComment> comments; //комментарии
 
-
 /* Вывод должен получиться таким:
 Post{title='xxx', content.length='x', tags=[x,x],
 comments=[PostComment{text='x!', whoLiked=[x, x]},
 PostComment{text='x', whoLiked=[x,x]},
 PostComment{text='x', whoLiked=null}]} */
 
+
     @Override
     public String toString() {
-        String result = "Post {title='" + title + '\'';
-        if (content != null) {
-            result = result + ", content.length=" + content.length();
-        } else {
-            result = result + ", content=null";
-        }
-        return result + ", tags=" + Arrays.toString(tags) + '\'' + '}';
+        return "Post{" +
+                "title='" + title + '\'' +
+                ", content.length='" + content.length() + '\'' +
+                ", tags=" + Arrays.toString(tags) +
+                ", comments=" + comments + '}';
     }
 
-    public String getTitle() {
-        return title;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String setTitle() {
-        return title;
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public String getContent() {
-        return content;
+    public void setTags(String[] tags) {
+        this.tags = tags;
     }
 
-    public String setContent() {
-        return content;
-    }
-
-    public String[] getTags() {
-        return tags;
-    }
-
-    public String[] setTags() {
-        return tags;
-    }
-
-    public ArrayList<PostComment> getComments() {
-        return comments;
-    }
-
-    public ArrayList<PostComment> setComments() {
-        return comments;
+    public void setComments(ArrayList<PostComment> comments) {
+        this.comments = comments;
     }
 }
